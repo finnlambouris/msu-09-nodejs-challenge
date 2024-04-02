@@ -1,28 +1,104 @@
 const inquirer = require("inquirer");
 
+
 // Title
-"What is the title of your project?"
+let getProjectTitle = async function() {
+    let projectTitle = await inquirer.prompt(
+        [
+            {
+                name: 'title',
+                type: 'input',
+                message: "What is the title of your project?",
+            }
+        ]
+    )
+    console.log(projectTitle);
+    getProjectDescription();
+}
+
+// Description
+let getProjectDescription = async function() {
+    let projectDescription = await inquirer.prompt(
+        [
+            {
+                name: 'description',
+                type: 'input',
+                message: "Enter your project's description.",
+            }
+        ]
+    )
+    console.log(projectDescription);
+    getInstallationInstructions();
+}
+
+// Installation Instructions
+let getInstallationInstructions = async function() {
+    let installationInstructions = await inquirer.prompt(
+        [
+            {
+                name: 'installation instructions',
+                type: 'input',
+                message: "Enter any installation instructions for your project.",
+            }
+        ]
+    )
+    console.log(installationInstructions);
+    getUsageInformation();
+}
+
 
 // Table of Contents
 // Description, Installation Instructions, Usage, License, Credits, Test Instructions, and Questions
 
-// Description
-"Enter your project's description."
-
-// Installation Instructions
-"Enter any installation instructions for your project."
-
 // Usage
-"Enter your project's usage information."
+let getUsageInformation = async function() {
+    let usageInformation = await inquirer.prompt(
+        [
+            {
+                name: 'usage information',
+                type: 'input',
+                message: "Enter your project's usage information.",
+            }
+        ]
+    )
+    console.log(usageInformation);
+    getLicense();
+}
 
 // License
-// select license
+let getLicense = async function() {
+    // select license
+    getCredits();
+}
 
 // Credits
-"Enter any credits for outside sources that helped you create your project."
+let getCredits = async function() {
+    let credits = await inquirer.prompt(
+        [
+            {
+                name: 'credits',
+                type: 'input',
+                message: "Enter any credits for outside sources that helped you create your project.",
+            }
+        ]
+    )
+    console.log(credits);
+    getTestInstructions();
+}
 
 // Test Instructions
-"Enter any testing instructions for your project."
+let getTestInstructions = async function() {
+    let testInstructions = await inquirer.prompt(
+        [
+            {
+                name: 'test instructions',
+                type: 'input',
+                message: "Enter any testing instructions for your project.",
+            }
+        ]
+    )
+    console.log(testInstructions);
+}
 
 // Questions
 
@@ -34,4 +110,4 @@ function writeToFile(fileName, data) {}
 function init() {}
 
 // Function call to initialize app
-init();
+getProjectTitle();
