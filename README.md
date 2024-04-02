@@ -5,6 +5,9 @@ AS a developer<br>
 I WANT a README generator<br>
 SO THAT I can quickly create a professional README for a new project
 
+## Functionality
+[Walkthrough Video](https://youtu.be/ef-ThxIlm08)
+
 ## Installation
 Node.js and Inquirer are needed to be able to run this code in the terminal.
 
