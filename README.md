@@ -26,7 +26,7 @@ WHEN I click on the links in the Table of Contents<br>
 THEN I am taken to the corresponding section of the README
 
 ## Credits
-Starter code was provided by the MSU coding bootcamp and can be viewed in the initial commit.
+N/A
 
 ## License
 MIT License
