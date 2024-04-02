@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 
-
 // Title
 let getProjectTitle = async function() {
     let projectTitle = await inquirer.prompt(
@@ -46,10 +45,6 @@ let getInstallationInstructions = async function() {
     getUsageInformation();
 }
 
-
-// Table of Contents
-// Description, Installation Instructions, Usage, License, Credits, Test Instructions, and Questions
-
 // Usage
 let getUsageInformation = async function() {
     let usageInformation = await inquirer.prompt(
@@ -67,7 +62,17 @@ let getUsageInformation = async function() {
 
 // License
 let getLicense = async function() {
-    // select license
+    let license = await inquirer.prompt(
+        [
+            {
+                name: 'license',
+                type: 'list',
+                message: 'What license are you using for your project?',
+                choices: ['MIT License', 'Apache License', 'GPLv3 License', 'Mozilla Public License 2.0', 'BSD 3-Clause License']
+            }
+        ]
+    )
+    console.log(license);
     getCredits();
 }
 
@@ -98,9 +103,26 @@ let getTestInstructions = async function() {
         ]
     )
     console.log(testInstructions);
+    getGitHubUsername();
 }
 
 // Questions
+let getGitHubUsername = async function() {
+    let gitHubUsername = await inquirer.prompt(
+        [
+            {
+                name: 'GitHub username',
+                type: 'input',
+                message: "Enter your GitHub username.",
+            }
+        ]
+    )
+    console.log(gitHubUsername);
+}
+
+
+// Table of Contents
+// Description, Installation Instructions, Usage, License, Credits, Test Instructions, and Questions
 
 
 // TODO: Create a function to write README file
