@@ -130,6 +130,13 @@ let READMEcontent = `
 # Title
 
 ## Table of Contents
+* [Description](https://github.com/finntendoverse/msu-09-nodejs-challenge/tree/main/generatedREADMEs#description)
+* [Installation Instructions](https://github.com/finntendoverse/msu-09-nodejs-challenge/tree/main/generatedREADMEs#installation-instructions)
+* Usage
+* License
+* Credits
+* Test Instructions
+* Questions?
 
 ## Description
 
@@ -147,9 +154,6 @@ let READMEcontent = `
 `
 fileSystem.writeFile('./generatedREADMEs/README.md', READMEcontent, (err) => err ? console.error("there was an error") : console.log("done!"));
 }
-
-// Table of Contents
-// Description, Installation Instructions, Usage, License, Credits, Test Instructions, and Questions
 
 
 // TODO: Create a function to write README file
