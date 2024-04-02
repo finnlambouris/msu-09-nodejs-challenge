@@ -1,5 +1,5 @@
 
-# dshfakl [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Untitled project [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 * [Description](https://github.com/finntendoverse/msu-09-nodejs-challenge/tree/main/generatedREADMEs#description)
@@ -11,24 +11,24 @@
 * [Questions?](https://github.com/finntendoverse/msu-09-nodejs-challenge/tree/main/generatedREADMEs#questions)
 
 ## Description
-asldhflkajs
+N/A
 
 ## Installation Instructions
-aksdhfjklas
+N/A
 
 ## Usage
-lakshdflka
+N/A
 
 ## License
 This application is covered under the MIT License.
 
 ## Credits
-sljhdf;alk
+N/A
 
 ## Test Instructions
-sdkahfsal
+N/A
 
 ## Questions?
 Here's how you can get in contact with me to ask any questions!
-* [Visit my GitHub](https://github.com/finntendoverse)
-* [Email me](mailto:finnlambouris616@gmail.com)
+* [Visit my GitHub](https://github.com/)
+* [Email me](mailto:)

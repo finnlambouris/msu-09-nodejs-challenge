@@ -1,6 +1,8 @@
+// variables for the npm modules used
 const inquirer = require('inquirer');
 const fileSystem = require('fs');
 
+// function that handles all the prompts and user input
 let initializePrompting = function() {
     // Title
     let getProjectTitle = async function() {
@@ -13,6 +15,11 @@ let initializePrompting = function() {
                 }
             ]
         )
+
+        if (projectTitle.title === '') {
+            projectTitle.title = 'Untitled project';
+        }
+
         getProjectDescription(projectTitle);
     }
 
@@ -29,6 +36,11 @@ let initializePrompting = function() {
                 }
             ]
         )
+
+        if (projectDescription.description === '') {
+            projectDescription.description = 'N/A';
+        }
+
         getInstallationInstructions(projectTitle, projectDescription);
     }
 
@@ -43,6 +55,11 @@ let initializePrompting = function() {
                 }
             ]
         )
+
+        if (installationInstructions.installation === '') {
+            installationInstructions.installation = 'N/A';
+        }
+
         getUsageInformation(projectTitle, projectDescription, installationInstructions);
     }
 
@@ -57,6 +74,11 @@ let initializePrompting = function() {
                 }
             ]
         )
+
+        if (usageInformation.usage === '') {
+            usageInformation.usage = 'N/A';
+        }
+
         getLicense(projectTitle, projectDescription, installationInstructions, usageInformation);
     }
 
@@ -98,6 +120,11 @@ let initializePrompting = function() {
                 }
             ]
         )
+
+        if (credits.credits === '') {
+            credits.credits = 'N/A';
+        }
+
         getTestInstructions(projectTitle, projectDescription, installationInstructions, usageInformation, license, credits);
     }
 
@@ -112,6 +139,11 @@ let initializePrompting = function() {
                 }
             ]
         )
+
+        if (testInstructions.testing === '') {
+            testInstructions.testing = 'N/A';
+        }
+
         getGitHubUsername(projectTitle, projectDescription, installationInstructions, usageInformation, license, credits, testInstructions);
     }
 
@@ -126,6 +158,7 @@ let initializePrompting = function() {
                 }
             ]
         )
+
         getEmailAddress(projectTitle, projectDescription, installationInstructions, usageInformation, license, credits, testInstructions, gitHubUsername);
     }
 
@@ -139,10 +172,12 @@ let initializePrompting = function() {
                 }
             ]
         )
+
         generateREADME(projectTitle, projectDescription, installationInstructions, usageInformation, license, credits, testInstructions, gitHubUsername, email);
     }
 }
 
+// function to generate the README
 let generateREADME = function (projectTitle, projectDescription, installationInstructions, usageInformation, license, credits, testInstructions, gitHubUsername, email) {
 let READMEcontent = `
 # ${projectTitle.title} ${license.badge}
@@ -182,6 +217,5 @@ Here's how you can get in contact with me to ask any questions!
 fileSystem.writeFile('./generatedREADMEs/README.md', READMEcontent, (err) => err ? console.error("there was an error") : console.log("done!"));
 }
 
-// Function call to initialize app
+// function to initialize the prompts
 initializePrompting();
-// generateREADME();
